@@ -1,38 +1,79 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    font-family: 'Bitter', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 body {
-    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: rgb(150, 150, 150);
+}
+
+.cardpage {
+    height: 100vh;
+    grid-column: 4/10;
+    background-color: rgb(241, 242, 246);
+    display: flex;
 }
 
 .card {
-    width: 500px;
+    width: 50%;
     height: 250px;
     background-color: white;
     border-radius: 20px;
     display: flex;
 
     overflow: hidden;
-    
+    margin: 1%;
 }
 
-.card>div{
+
+.card>div {
     flex: 1;
+    padding: 10px;
+
 }
 
-.picture{
+.picture {
     max-width: 40%;
-    background-color: rgb(232,104,129);
+    background-color: rgb(232, 104, 129);
+
+    color: white;
+
 }
 
-.face{
+.face {
     height: 60%;
+    margin: 0 20px;
 }
 
-.face>img{
+.face>img {
     height: 100%;
     aspect-ratio: 1/1;
-    border-radius:100%;
+    border-radius: 100%;
     border: 4px solid white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.name,
+.buscard {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.buscard {
+    color: rgb(232, 104, 129);
+}
+
+span.subject {
+    font-weight: 700;
+}
+
+.content {
+    font-size: 19px;
 }
