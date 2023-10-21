@@ -9,23 +9,38 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background-color: rgb(150, 150, 150);
+
 }
 
 .cardpage {
     height: 100vh;
     grid-column: 4/10;
     background-color: rgb(241, 242, 246);
+    overflow: scroll;
+
+
+}
+
+.cardgroup {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 5% 5% 2% 5%;
+
 }
 
 .card {
-    width: 50%;
-    height: 250px;
+    width: 48%;
+    height: 200px;
     background-color: white;
     border-radius: 20px;
     display: flex;
 
+
+
     overflow: hidden;
+
     margin: 1%;
 }
 
@@ -37,7 +52,7 @@ body {
 }
 
 .picture {
-    max-width: 40%;
+    max-width: 30%;
     background-color: rgb(232, 104, 129);
 
     color: white;
@@ -46,28 +61,31 @@ body {
 
 .face {
     height: 60%;
-    margin: 0 20px;
+
 }
 
 .face>img {
-    height: 100%;
+
+    max-width: 100%;
     aspect-ratio: 1/1;
     border-radius: 100%;
-    border: 4px solid white;
+    border: 2px solid white;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-.name,
-.buscard {
+.name {
     text-align: center;
     margin: 20px 0;
-    font-size: 25px;
+    font-size: 100%;
 }
 
 .buscard {
+    text-align: center;
     color: rgb(232, 104, 129);
+    margin: 5px 0;
+    font-size: 150%;
 }
 
 span.subject {
@@ -75,5 +93,20 @@ span.subject {
 }
 
 .content {
-    font-size: 19px;
+    font-size: 100%;
+
+}
+
+.content>div {
+    margin: 10px 0;
+}
+
+.footerBar {
+    min-height: 5%;
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+
+    box-shadow: 0 -10px 20px rgba(60, 60, 60, 0.2);
 }
